@@ -1,222 +1,290 @@
 <!DOCTYPE html>
 <html lang="fa">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نیروی دریایی آمریکا</title>
-
-    <style>
-        body {
-            font-family: 'Tahoma', sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            background-color: #e6edf3;
-            color: #1a1a1a;
-            direction: rtl;
-        }
-
-        header {
-            background-color: #002147;
-            color: #ffffff;
-            padding: 30px 0;
-            text-align: center;
-            text-shadow: 2px 2px 4px #000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-
-        nav {
-            background-color: #003366;
-            text-align: center;
-            padding: 10px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        section {
-            flex: 3;
-            padding: 20px;
-            background-color: #f4f7f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        aside {
-            flex: 1;
-            background-color: #eef2f5;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #003366;
-            border-bottom: 3px solid #003366;
-            padding-bottom: 5px;
-            text-shadow: 1px 1px 2px #ccc;
-        }
-
-        p {
-            text-align: justify;
-            font-size: 1.1em;
-        }
-
-        footer {
-            background-color: #002147;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* فرم لاگین ساده */
-        .login-box {
-            background-color: #f9fafc;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            width: 300px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .login-box h3 {
-            color: #003366;
-            margin-bottom: 15px;
-        }
-
-        .login-box input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #bbb;
-            border-radius: 5px;
-        }
-
-        .login-box button {
-            background-color: #002147;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .login-box button:hover {
-            background-color: #004080;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>⚓ نیروی دریایی امریکا ⚓</title>
+<style>
+:root {
+  --navy-dark: #00112b;
+  --navy-mid:  #102a54;
+  --navy-light:#17386e;
+  --text: #ffffff;
+  --muted: #cfe7ff;
+  --card-bg: #0f2a52;
+}
+html,body{margin:0;padding:0;height:100%}
+body{
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--navy-dark);
+  color:var(--text);
+  direction: rtl;
+  line-height:1.6;
+}
+header{
+  background:var(--navy-mid);
+  padding:28px 16px;
+  text-align:center;
+  border-bottom:2px solid rgba(255,255,255,0.03);
+}
+header h1{margin:0;font-size:28px;letter-spacing:1px}
+nav{
+  background:var(--navy-dark);
+  padding:12px 10px;
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.02);
+}
+nav ul{list-style:none;margin:0;padding:0;display:inline-block}
+nav ul li{display:inline-block;margin:0 8px}
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600;
+  padding:6px 10px;
+  display:inline-block;
+}
+.container{
+  max-width:1100px;
+  margin:24px auto;
+  padding:0 16px;
+}
+.main-dashboard{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-bottom:22px;
+}
+.card{
+  background:var(--card-bg);
+  padding:22px;
+  border-radius:8px;
+  min-height:110px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 2px 0 rgba(0,0,0,0.15);
+}
+.card .icon{font-size:34px;margin-bottom:8px}
+.card .title{font-size:16px;font-weight:700;color:var(--text)}
+main{display:flex;flex-wrap:wrap;gap:18px}
+section{
+  background:var(--navy-mid);
+  padding:18px;
+  border-radius:8px;
+  flex:1 1 600px;
+  display:none;
+}
+section.active{display:block}
+aside{
+  background:var(--card-bg);
+  padding:18px;
+  border-radius:8px;
+  min-width:260px;
+  max-width:320px;
+  flex:0 0 300px;
+}
+.login-box{
+  background:#0f2748;
+  border:1px solid rgba(255,255,255,0.03);
+  width:340px;
+  margin:80px auto;
+  padding:24px;
+  border-radius:10px;
+  text-align:center;
+}
+.login-box h3{margin:0 0 12px 0;color:var(--muted)}
+.login-box input{
+  width:86%;
+  padding:10px;
+  margin:10px 0;
+  border:0;
+  border-radius:6px;
+  background:#07162b;
+  color:var(--text);
+}
+.login-box button{
+  background:var(--navy-dark);
+  color:var(--text);
+  border:1px solid rgba(255,255,255,0.03);
+  padding:10px 22px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:700;
+}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px}
+th{color:var(--muted);font-weight:700}
+.back-link{display:inline-block;margin-top:12px;color:var(--muted);text-decoration:none;font-weight:600}
+footer{
+  margin:30px 0 0 0;
+  padding:18px;
+  text-align:center;
+  background:var(--navy-dark);
+  border-top:1px solid rgba(255,255,255,0.02);
+}
+@media (max-width:900px){
+  aside{order:2;flex-basis:100%;max-width:100%}
+  section{flex-basis:100%}
+  .login-box{width:92%;}
+  nav ul li{margin:0 6px}
+}
+</style>
 </head>
-
 <body>
 
-    <header>
-        <h1>نیروی دریایی ایالات متحده آمریکا</h1>
-    </header>
+<div id="loginView" class="login-box">
+  <h3>⚓ ورود به سایت نیروی دریایی ⚓</h3>
+  <input id="username" type="text" placeholder="نام کاربری">
+  <input id="password" type="password" placeholder="رمز عبور">
+  <div><button onclick="performLogin()">ورود</button></div>
+</div>
 
-    <nav>
-        <ul>
-            <li><a href="#">خانه</a></li>
-            <li><a href="#">تاریخچه</a></li>
-            <li><a href="#">ناوگان</a></li>
-            <li><a href="#">ماموریت‌ها</a></li>
-            <li><a href="#">ارتباط با ما</a></li>
+<div id="app" style="display:none;">
+  <header>
+    <h1>نیروی دریایی ایالات متحده  </h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showPanel('dashboard')">منوی اصلی</a></li>
+      <li><a href="#" onclick="showPanel('carriers')">ناوهای هواپیمابر</a></li>
+      <li><a href="#" onclick="showPanel('submarines')">زیردریایی‌ها</a></li>
+      <li><a href="#" onclick="showPanel('warships')">ناوهای جنگی</a></li>
+      <li><a href="#" onclick="showPanel('aircraft')">هواپیماهای دریایی</a></li>
+      <li><a href="#" onclick="showPanel('history')">تاریخچه</a></li>
+      <li><a href="#" onclick="showPanel('contact')">ارتباط با ما</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <main>
+      <aside>
+        <h3>اطلاعات کلی</h3>
+        <p style="margin:8px 0;color:var(--muted)">
+          نیروی دریایی آمریکا از بزرگ‌ترین و پیچیده‌ترین نیروهای نظامی دریایی جهان است.
+        </p>
+        <ul style="list-style:none;padding:0;margin:12px 0 0 0;">
+          <li>⚓ پرسنل فعال:  ۳۴۰٬۰۰۰</li>
+          <li>🚢 شناورها:  ۴۸۰+</li>
+          <li>✈️ هواپیماها:  ۳۰۰۰+</li>
+          <li>🌍 حضور: بیش از ۷۰ کشور</li>
         </ul>
-    </nav>
+      </aside>
 
-    <div class="container">
-        <main>
-            <section>
-                <h2>معرفی</h2>
-                <p>
-                    نیروی دریایی ایالات متحده آمریکا (US Navy) یکی از پنج شاخه اصلی نیروهای مسلح این کشور است و وظیفه اصلی آن حفاظت از منافع آمریکا در دریاها، اقیانوس‌ها و آب‌های بین‌المللی می‌باشد. این نیرو بزرگ‌ترین و قدرتمندترین نیروی دریایی جهان محسوب می‌شود و با استفاده از ناوهای هواپیمابر، زیردریایی‌ها و ناوهای جنگی پیشرفته عملیات‌های گسترده‌ای در سراسر جهان انجام می‌دهد.
-                </p>
-
-                <h2>تاریخچه</h2>
-                <p>
-                    ریشه‌های نیروی دریایی آمریکا به سال ۱۷۷۵ میلادی بازمی‌گردد، زمانی که کنگره قاره‌ای تصمیم گرفت ناوگانی کوچک برای مقابله با بریتانیا تشکیل دهد. از آن زمان تاکنون، نیروی دریایی آمریکا نقش کلیدی در جنگ‌های مختلف از جمله جنگ جهانی دوم، جنگ کره، و عملیات‌های مدرن در خاورمیانه ایفا کرده است.
-                </p>
-
-                <h2>تجهیزات و فناوری</h2>
-                <p>
-                    نیروی دریایی آمریکا از پیشرفته‌ترین ناوها، زیردریایی‌های اتمی و هواپیماهای جنگی استفاده می‌کند. ناوهای هواپیمابر این نیرو مانند USS Gerald R. Ford و USS Nimitz از بزرگ‌ترین کشتی‌های نظامی تاریخ هستند. همچنین، فناوری‌های مدرن راداری، موشکی و دفاعی باعث شده این نیرو برتری خود را در دریاها حفظ کند.
-                </p>
-
-                <h2>ماموریت‌ها</h2>
-                <p>
-                    از جمله ماموریت‌های اصلی نیروی دریایی آمریکا می‌توان به دفاع از آزادی دریانوردی، مقابله با تروریسم دریایی، انجام عملیات‌های انسان‌دوستانه، و حمایت از متحدان آمریکا در سراسر جهان اشاره کرد.
-                </p>
-            </section>
-
-            <aside>
-                <h2>حقایق جالب</h2>
-                <ul style="list-style:none; padding:0;">
-                    <li> نیروی دریایی آمریکا حدود ۳۴۰ هزار نیروی فعال دارد.</li>
-                    <li> دارای بیش از ۴۸۰ کشتی و زیردریایی است.</li>
-                    <li> حدود ۳۰۰۰ هواپیمای نظامی در خدمت دارد.</li>
-                    <li> در بیش از ۷۰ کشور پایگاه دارد.</li>
-                </ul>
-            </aside>
-        </main>
-
-        <div class="login-box">
-            <h3>ورود به سایتم</h3>
-            <form>
-                <input type="text" placeholder="نام کاربری"><br>
-                <input type="password" placeholder="رمز عبور"><br>
-                <button type="submit">ورود</button>
-            </form>
+      <section id="dashboard" class="active">
+        <h2>منو اصلی</h2>
+        <p>از اینجا می‌توانید به اطلاعات مربوط به ناوها، هواپیماها و تجهیزات نیروی دریایی دسترسی پیدا کنید.</p>
+        <div class="main-dashboard">
+          <div class="card" onclick="showPanel('carriers')"><div class="icon">✈️</div><div class="title">ناوهای هواپیمابر</div></div>
+          <div class="card" onclick="showPanel('submarines')"><div class="icon">🚤</div><div class="title">زیردریایی‌ها</div></div>
+          <div class="card" onclick="showPanel('warships')"><div class="icon">⚓</div><div class="title">ناوهای جنگی</div></div>
+          <div class="card" onclick="showPanel('aircraft')"><div class="icon">🛩️</div><div class="title">هواپیماهای دریایی</div></div>
+          <div class="card" onclick="showPanel('history')"><div class="icon">📜</div><div class="title">تاریخچه</div></div>
+          <div class="card" onclick="showPanel('contact')"><div class="icon">☎️</div><div class="title">ارتباط با ما</div></div>
         </div>
-    </div>
+      </section>
 
-    <footer>
-        <p>بخدا خودم نوشتم</p>
-    </footer>
+      <section id="carriers">
+        <h2>ناوهای هواپیمابر</h2>
+        <p>ناوهای هواپیمابر به‌عنوان ستون اصلی قدرت دریایی مدرن شناخته می‌شوند. فهرست برخی از مهم‌ترین آن‌ها:</p>
+        <table>
+          <thead><tr><th>نام</th><th>کلاس</th><th>سال ورود</th></tr></thead>
+          <tbody>
+            <tr><td>USS Gerald R. Ford (CVN-78)</td><td>Ford</td><td>۲۰۱۷</td></tr>
+            <tr><td>USS Nimitz (CVN-68)</td><td>Nimitz</td><td>۱۹۷۵</td></tr>
+            <tr><td>USS Enterprise (CVN-65)</td><td>Enterprise</td><td>۱۹۶۱</td></tr>
+          </tbody>
+        </table>
+        <h3>USS Gerald R. Ford</h3>
+        <p>اولین ناو از کلاس فورد با سامانه پرتاب الکترومغناطیسی EMALS و طراحی مدرن برای کارایی بیشتر.</p>
+        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
+      </section>
+
+      <section id="submarines">
+        <h2>زیردریایی‌ها</h2>
+        <p>زیردریایی‌های هسته‌ای و تهاجمی آمریکا در مأموریت‌های شناسایی، ضدزیردریایی و بازدارندگی نقش مهمی دارند.</p>
+        <table>
+          <thead><tr><th>نام</th><th>کلاس</th><th>نوع</th></tr></thead>
+          <tbody>
+            <tr><td>USS Virginia</td><td>Virginia</td><td>تهاجمی (Attack)</td></tr>
+            <tr><td>USS Ohio</td><td>Ohio</td><td>حامل موشک بالستیک</td></tr>
+            <tr><td>USS Seawolf</td><td>Seawolf</td><td>چندمنظوره</td></tr>
+          </tbody>
+        </table>
+        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
+      </section>
+
+      <section id="warships">
+        <h2>ناوهای جنگی</h2>
+        <ul style="padding-inline-start:20px">
+          <li>Arleigh Burke — ناوشکن چندمنظوره</li>
+          <li>Zumwalt — ناوشکن مدرن پنهان‌کار</li>
+          <li>Ticonderoga — ناو رهگیر با سیستم AEGIS</li>
+        </ul>
+        <h4>USS Zumwalt</h4>
+        <p>طراحی خاص بدنه برای کاهش بازتاب راداری و بهره‌گیری از سامانه‌های پیشرفته.</p>
+        <p><a class="back-link" href="#" onclick="showPanel('dashboard')">⬅ بازگشت</a></p>
+      </section>
+
+      <section id="aircraft">
+        <h2>هواپیماهای دریایی</h2>
+        <table>
+          <thead><tr><th>مدل</th><th>نقش</th></tr></thead>
+          <tbody>
+            <tr><td>F/A-18 Super Hornet</td><td>چندمنظوره</td></tr>
+            <tr><td>EA-18G Growler</td><td>جنگ الکترونیک</td></tr>
+            <tr><td>P-8 Poseidon</td><td>ضدزیردریایی</td></tr>
+            <tr><td>MH-60 Seahawk</td><td>هلیکوپتر چندمنظوره</td></tr>
+            <tr><td>F-35C Lightning II</td><td>جنگنده نسل پنجم مخصوص ناوها</td></tr>
+          </tbody>
+        </table>
+        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
+      </section>
+
+      <section id="history">
+        <h2>تاریخچه</h2>
+        <ul style="padding-inline-start:20px">
+          <li>1175  تأسیس اولیه در جنگ استقلال</li>
+          <li>1917  ورود به جنگ جهانی اول</li>
+          <li>1942  نقش حیاتی در جنگ جهانی دوم</li>
+          <li>1990  عملیات در خلیج فارس</li>
+          <li>عملیات جنگ 12 روزه بین ایران و اسراییل 2025</li>
+        </ul>
+        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
+      </section>
+
+      <section id="contact">
+        <h2>ارتباط با ما</h2>
+        <p><strong>تلفن:</strong> 09013542489</p>
+        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
+      </section>
+
+    </main>
+  </div>
+  
+  <footer>
+    <p>⚓بابا بخدا خودم نوشتم⚓</p>
+  </footer>
+</div>
+
+<script>
+function performLogin(){
+  var u=document.getElementById('username').value.trim();
+  var p=document.getElementById('password').value.trim();
+  if(u===""||p===""){alert('نام کاربری و رمز را وارد کنید');return;}
+  document.getElementById('loginView').style.display='none';
+  document.getElementById('app').style.display='block';
+  showPanel('dashboard');
+}
+function showPanel(id){
+  document.querySelectorAll('main section').forEach(s=>{
+    s.classList.remove('active');s.style.display='none';
+  });
+  var t=document.getElementById(id);
+  if(t){t.classList.add('active');t.style.display='block';window.scrollTo(0,0);}
+}
+</script>
 
 </body>
-
 </html>
