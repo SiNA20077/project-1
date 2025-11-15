@@ -1,289 +1,331 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>⚓ نیروی دریایی امریکا ⚓</title>
+<title>⚓ نیروی دریایی ایالات متحده آمریکا ⚓</title>
+
 <style>
 :root {
-  --navy-dark: #00112b;
-  --navy-mid:  #102a54;
+  --navy-dark:#00112b;
+  --navy-mid:#102a54;
   --navy-light:#17386e;
-  --text: #ffffff;
-  --muted: #cfe7ff;
-  --card-bg: #0f2a52;
+  --text:#ffffff;
+  --muted:#cfe7ff;
+  --card-bg:#0f2a52;
 }
-html,body{margin:0;padding:0;height:100%}
-body{
-  font-family: Tahoma, Arial, sans-serif;
-  background: var(--navy-dark);
-  color:var(--text);
-  direction: rtl;
-  line-height:1.6;
-}
-header{
-  background:var(--navy-mid);
-  padding:28px 16px;
-  text-align:center;
-  border-bottom:2px solid rgba(255,255,255,0.03);
-}
-header h1{margin:0;font-size:28px;letter-spacing:1px}
-nav{
+
+body {
+  margin:0;
   background:var(--navy-dark);
-  padding:12px 10px;
+  color:var(--text);
+  font-family:tahoma;
+  line-height:1.8;
+}
+
+header {
+  background:var(--navy-mid);
+  padding:25px;
   text-align:center;
-  border-bottom:1px solid rgba(255,255,255,0.02);
 }
-nav ul{list-style:none;margin:0;padding:0;display:inline-block}
-nav ul li{display:inline-block;margin:0 8px}
-nav a{
+
+nav ul {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  list-style:none;
+  padding:14px;
+  margin:0;
+  gap:16px;
+}
+nav a {
   color:var(--muted);
+  font-weight:bold;
   text-decoration:none;
-  font-weight:600;
-  padding:6px 10px;
-  display:inline-block;
 }
-.container{
-  max-width:1100px;
-  margin:24px auto;
+
+.container {
+  max-width:1200px;
+  margin:25px auto;
   padding:0 16px;
 }
-.main-dashboard{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-  margin-bottom:22px;
+
+.main-flex {
+  display:flex;
+  gap:20px;
 }
-.card{
+
+aside {
+  flex:0 0 260px;
   background:var(--card-bg);
+  padding:20px;
+  border-radius:8px;
+}
+
+section {
+  flex:1;
+  background:var(--navy-mid);
   padding:22px;
   border-radius:8px;
-  min-height:110px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  box-shadow:0 2px 0 rgba(0,0,0,0.15);
+  min-height:450px;
 }
-.card .icon{font-size:34px;margin-bottom:8px}
-.card .title{font-size:16px;font-weight:700;color:var(--text)}
-main{display:flex;flex-wrap:wrap;gap:18px}
-section{
-  background:var(--navy-mid);
-  padding:18px;
-  border-radius:8px;
-  flex:1 1 600px;
-  display:none;
-}
-section.active{display:block}
-aside{
-  background:var(--card-bg);
-  padding:18px;
-  border-radius:8px;
-  min-width:260px;
-  max-width:320px;
-  flex:0 0 300px;
-}
-.login-box{
-  background:#0f2748;
-  border:1px solid rgba(255,255,255,0.03);
-  width:340px;
-  margin:80px auto;
-  padding:24px;
-  border-radius:10px;
-  text-align:center;
-}
-.login-box h3{margin:0 0 12px 0;color:var(--muted)}
-.login-box input{
-  width:86%;
-  padding:10px;
-  margin:10px 0;
-  border:0;
-  border-radius:6px;
-  background:#07162b;
-  color:var(--text);
-}
-.login-box button{
-  background:var(--navy-dark);
-  color:var(--text);
-  border:1px solid rgba(255,255,255,0.03);
-  padding:10px 22px;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:700;
-}
-table{width:100%;border-collapse:collapse;margin-top:10px}
-th,td{padding:8px 10px;text-align:right;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px}
-th{color:var(--muted);font-weight:700}
-.back-link{display:inline-block;margin-top:12px;color:var(--muted);text-decoration:none;font-weight:600}
-footer{
-  margin:30px 0 0 0;
-  padding:18px;
+
+footer {
+  margin-top:40px;
+  padding:16px;
   text-align:center;
   background:var(--navy-dark);
-  border-top:1px solid rgba(255,255,255,0.02);
 }
-@media (max-width:900px){
-  aside{order:2;flex-basis:100%;max-width:100%}
-  section{flex-basis:100%}
-  .login-box{width:92%;}
-  nav ul li{margin:0 6px}
+
+@media(max-width:900px){
+  .main-flex{flex-direction:column;}
+  aside{width:100%;}
+}
+
+form label{display:block;margin-top:12px;font-weight:bold;}
+form input{
+  width:95%;padding:10px;border-radius:6px;border:0;background:#07162b;color:#fff;
+}
+form button{
+  margin-top:16px;padding:10px 20px;background:var(--navy-light);border:0;border-radius:6px;color:#fff;cursor:pointer;
 }
 </style>
 </head>
+
 <body>
 
-<div id="loginView" class="login-box">
-  <h3>⚓ ورود به سایت نیروی دریایی ⚓</h3>
-  <input id="username" type="text" placeholder="نام کاربری">
-  <input id="password" type="password" placeholder="رمز عبور">
-  <div><button onclick="performLogin()">ورود</button></div>
+<header>
+  <h1>⚓ نیروی دریایی ایالات متحده آمریکا ⚓</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#" onclick="loadPage('dashboard')">خانه</a></li>
+    <li><a href="#" onclick="loadPage('carriers')">ناوهای هواپیمابر</a></li>
+    <li><a href="#" onclick="loadPage('submarines')">زیردریایی‌ها</a></li>
+    <li><a href="#" onclick="loadPage('warships')">ناوهای جنگی</a></li>
+    <li><a href="#" onclick="loadPage('aircraft')">هواپیماهای دریایی</a></li>
+    <li><a href="#" onclick="loadPage('history')">تاریخچه</a></li>
+    <li><a href="#" onclick="loadPage('contact')">ارتباط</a></li>
+    <li><a href="#" onclick="loadPage('register')">ثبت‌نام</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <main class="main-flex">
+
+    <aside>
+      <h3>آمار کلی</h3>
+      <ul>
+        <li>⚓ پرسنل فعال: ۳۴۰٬۰۰۰+</li>
+        <li>🚢 تعداد شناورها: ۴۸۰+</li>
+        <li>✈️ هواپیماها: ۳۰۰۰+</li>
+        <li>🌍 پایگاه‌ها: ۸۰ کشور</li>
+        <li>💰 بودجه سالانه: ۲۴۰ میلیارد دلار</li>
+      </ul>
+    </aside>
+
+    <section id="content">...</section>
+
+  </main>
 </div>
 
-<div id="app" style="display:none;">
-  <header>
-    <h1>نیروی دریایی ایالات متحده  </h1>
-  </header>
+<footer>
+  ⚓طراحی شده توسط سینا⚓
+</footer>
 
-  <nav>
-    <ul>
-      <li><a href="#" onclick="showPanel('dashboard')">منوی اصلی</a></li>
-      <li><a href="#" onclick="showPanel('carriers')">ناوهای هواپیمابر</a></li>
-      <li><a href="#" onclick="showPanel('submarines')">زیردریایی‌ها</a></li>
-      <li><a href="#" onclick="showPanel('warships')">ناوهای جنگی</a></li>
-      <li><a href="#" onclick="showPanel('aircraft')">هواپیماهای دریایی</a></li>
-      <li><a href="#" onclick="showPanel('history')">تاریخچه</a></li>
-      <li><a href="#" onclick="showPanel('contact')">ارتباط با ما</a></li>
-    </ul>
-  </nav>
 
-  <div class="container">
-    <main>
-      <aside>
-        <h3>اطلاعات کلی</h3>
-        <p style="margin:8px 0;color:var(--muted)">
-          نیروی دریایی آمریکا از بزرگ‌ترین و پیچیده‌ترین نیروهای نظامی دریایی جهان است.
-        </p>
-        <ul style="list-style:none;padding:0;margin:12px 0 0 0;">
-          <li>⚓ پرسنل فعال:  ۳۴۰٬۰۰۰</li>
-          <li>🚢 شناورها:  ۴۸۰+</li>
-          <li>✈️ هواپیماها:  ۳۰۰۰+</li>
-          <li>🌍 حضور: بیش از ۷۰ کشور</li>
-        </ul>
-      </aside>
+<template id="tpl-dashboard">
+  <h2>خانه</h2>
+  <p>
+    نیروی دریایی ایالات متحده بزرگ‌ترین و قدرتمندترین نیروی دریایی جهان است. این نیرو وظیفه حفاظت از منافع آمریکا در دریاها، عملیات امداد و نجات، مبارزه با دزدی دریایی، پشتیبانی از عملیات‌های زمینی و هوایی و حضور دائمی در اقیانوس‌ها را برعهده دارد.
+  </p>
 
-      <section id="dashboard" class="active">
-        <h2>منو اصلی</h2>
-        <p>از اینجا می‌توانید به اطلاعات مربوط به ناوها، هواپیماها و تجهیزات نیروی دریایی دسترسی پیدا کنید.</p>
-        <div class="main-dashboard">
-          <div class="card" onclick="showPanel('carriers')"><div class="icon">✈️</div><div class="title">ناوهای هواپیمابر</div></div>
-          <div class="card" onclick="showPanel('submarines')"><div class="icon">🚤</div><div class="title">زیردریایی‌ها</div></div>
-          <div class="card" onclick="showPanel('warships')"><div class="icon">⚓</div><div class="title">ناوهای جنگی</div></div>
-          <div class="card" onclick="showPanel('aircraft')"><div class="icon">🛩️</div><div class="title">هواپیماهای دریایی</div></div>
-          <div class="card" onclick="showPanel('history')"><div class="icon">📜</div><div class="title">تاریخچه</div></div>
-          <div class="card" onclick="showPanel('contact')"><div class="icon">☎️</div><div class="title">ارتباط با ما</div></div>
-        </div>
-      </section>
+  <h3>وظایف اصلی نیروی دریایی:</h3>
+  <ul>
+    <li>کنترل خطوط دریایی حیاتی جهان</li>
+    <li>استقرار نیروهای واکنش سریع</li>
+    <li>پشتیبانی از عملیات‌های مشترک زمینی و هوایی</li>
+    <li>بازدارندگی هسته‌ای از طریق زیردریایی‌های بالستیک</li>
+    <li>مقابله با تهدیدات سایبری و الکترونیک</li>
+  </ul>
 
-      <section id="carriers">
-        <h2>ناوهای هواپیمابر</h2>
-        <p>ناوهای هواپیمابر به‌عنوان ستون اصلی قدرت دریایی مدرن شناخته می‌شوند. فهرست برخی از مهم‌ترین آن‌ها:</p>
-        <table>
-          <thead><tr><th>نام</th><th>کلاس</th><th>سال ورود</th></tr></thead>
-          <tbody>
-            <tr><td>USS Gerald R. Ford (CVN-78)</td><td>Ford</td><td>۲۰۱۷</td></tr>
-            <tr><td>USS Nimitz (CVN-68)</td><td>Nimitz</td><td>۱۹۷۵</td></tr>
-            <tr><td>USS Enterprise (CVN-65)</td><td>Enterprise</td><td>۱۹۶۱</td></tr>
-          </tbody>
-        </table>
-        <h3>USS Gerald R. Ford</h3>
-        <p>اولین ناو از کلاس فورد با سامانه پرتاب الکترومغناطیسی EMALS و طراحی مدرن برای کارایی بیشتر.</p>
-        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
-      </section>
+  <h3>ساختار فرماندهی</h3>
+  <p>
+    نیروی دریایی تحت فرماندهی <b>Chief of Naval Operations</b> عمل کرده و دارای ۷ ناوگان اصلی (Fleet) در سراسر جهان است:
+  </p>
+  <ul>
+    <li>ناوگان یک و دو: امریکا و کانادا</li>
+    <li>ناوگان پنجم: خلیج فارس – بحرین</li>
+    <li>ناوگان هفتم: آسیا – ژاپن</li>
+    <li>ناوگان ششم: اروپا – ایتالیا</li>
+    <li>ناوگان سوم و چهارم: کنترل اقیانوس آرام و جنوب آمریکا</li>
+  </ul>
+</template>
 
-      <section id="submarines">
-        <h2>زیردریایی‌ها</h2>
-        <p>زیردریایی‌های هسته‌ای و تهاجمی آمریکا در مأموریت‌های شناسایی، ضدزیردریایی و بازدارندگی نقش مهمی دارند.</p>
-        <table>
-          <thead><tr><th>نام</th><th>کلاس</th><th>نوع</th></tr></thead>
-          <tbody>
-            <tr><td>USS Virginia</td><td>Virginia</td><td>تهاجمی (Attack)</td></tr>
-            <tr><td>USS Ohio</td><td>Ohio</td><td>حامل موشک بالستیک</td></tr>
-            <tr><td>USS Seawolf</td><td>Seawolf</td><td>چندمنظوره</td></tr>
-          </tbody>
-        </table>
-        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
-      </section>
 
-      <section id="warships">
-        <h2>ناوهای جنگی</h2>
-        <ul style="padding-inline-start:20px">
-          <li>Arleigh Burke — ناوشکن چندمنظوره</li>
-          <li>Zumwalt — ناوشکن مدرن پنهان‌کار</li>
-          <li>Ticonderoga — ناو رهگیر با سیستم AEGIS</li>
-        </ul>
-        <h4>USS Zumwalt</h4>
-        <p>طراحی خاص بدنه برای کاهش بازتاب راداری و بهره‌گیری از سامانه‌های پیشرفته.</p>
-        <p><a class="back-link" href="#" onclick="showPanel('dashboard')">⬅ بازگشت</a></p>
-      </section>
 
-      <section id="aircraft">
-        <h2>هواپیماهای دریایی</h2>
-        <table>
-          <thead><tr><th>مدل</th><th>نقش</th></tr></thead>
-          <tbody>
-            <tr><td>F/A-18 Super Hornet</td><td>چندمنظوره</td></tr>
-            <tr><td>EA-18G Growler</td><td>جنگ الکترونیک</td></tr>
-            <tr><td>P-8 Poseidon</td><td>ضدزیردریایی</td></tr>
-            <tr><td>MH-60 Seahawk</td><td>هلیکوپتر چندمنظوره</td></tr>
-            <tr><td>F-35C Lightning II</td><td>جنگنده نسل پنجم مخصوص ناوها</td></tr>
-          </tbody>
-        </table>
-        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
-      </section>
+<template id="tpl-carriers">
+  <h2>ناوهای هواپیمابر آمریکا</h2>
+  <p>
+    ناوهای هواپیمابر شاه‌کلید قدرت نظامی ایالات متحده هستند. هر ناو می‌تواند یک پایگاه هوایی کامل شامل ده‌ها جنگنده، هواپیمای هشدار زودهنگام، پهپاد و بالگرد را در هر نقطه از جهان مستقر کند.
+  </p>
 
-      <section id="history">
-        <h2>تاریخچه</h2>
-        <ul style="padding-inline-start:20px">
-          <li>1175  تأسیس اولیه در جنگ استقلال</li>
-          <li>1917  ورود به جنگ جهانی اول</li>
-          <li>1942  نقش حیاتی در جنگ جهانی دوم</li>
-          <li>1990  عملیات در خلیج فارس</li>
-          <li>عملیات جنگ 12 روزه بین ایران و اسراییل 2025</li>
-        </ul>
-        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
-      </section>
+  <h3>کلاس فورد (Ford-class)</h3>
+  <p>
+    جدیدترین و پیشرفته‌ترین ناوهای هواپیمابر جهان. ویژگی‌ها:
+  </p>
+  <ul>
+    <li>سامانه پرتاب EMALS</li>
+    <li>رادارهای AESA</li>
+    <li>توان تولید برق فوق‌العاده بالا برای لیزرهای دفاعی آینده</li>
+    <li>خدمه کمتر و نگهداری ساده‌تر از نیمیترز</li>
+  </ul>
 
-      <section id="contact">
-        <h2>ارتباط با ما</h2>
-        <p><strong>تلفن:</strong> 09013542489</p>
-        <p><a class="back-link" href="#" onclick="showPanel('dashboard')"> بازگشت</a></p>
-      </section>
+  <h3>کلاس نیمیتز (Nimitz-class)</h3>
+  <p>
+    ستون اصلی ناوگان آمریکا از ۱۹۷۵ تاکنون، با ظرفیت حمل حدود ۹۰ هواپیما.
+  </p>
 
-    </main>
-  </div>
+  <h3>لیست شناخته‌شده‌ترین ناوهای فعال:</h3>
+  <ul>
+    <li>USS Gerald R. Ford (CVN-78)</li>
+    <li>USS John F. Kennedy (CVN-79)</li>
+    <li>USS Nimitz (CVN-68)</li>
+    <li>USS Abraham Lincoln (CVN-72)</li>
+    <li>USS Theodore Roosevelt (CVN-71)</li>
+  </ul>
+</template>
+
+
+
+
+<template id="tpl-submarines">
+  <h2>زیردریایی‌های نیروی دریایی</h2>
+
+  <p>
+    زیردریایی‌های آمریکا شامل سه نوع اصلی هستند:  
+    <b>حامل موشک بالستیک (SSBN)</b> — <b>حامل موشک کروز (SSGN)</b> — <b>تهاجمی (SSN)</b>.
+  </p>
+
+  <h3>کلاس اوهایو (Ohio-class)</h3>
+  <p>
+    مهم‌ترین بخش «سه‌گانه هسته‌ای آمریکا». هر زیردریایی دارای ۲۴ موشک بالستیک Trident II است.
+  </p>
+
+  <h3>کلاس ویرجینیا (Virginia-class)</h3>
+  <p>
+    زیردریایی‌های تهاجمی مدرن با مأموریت‌های:
+  </p>
+  <ul>
+    <li>شناسایی عمیق</li>
+    <li>پشتیبانی عملیات نیروهای ویژه</li>
+    <li>جنگ ضدزیردریایی</li>
+    <li>پرتاب موشک‌های تاماهاوک</li>
+  </ul>
+
+  <h3>کلاس سی‌وولف (Seawolf)</h3>
+  <p>سریع‌ترین و پنهان‌کارترین زیردریایی‌های جهان، ساخته شده برای مقابله با زیردریایی‌های شوروی.</p>
+</template>
+
+
+
+<template id="tpl-warships">
+  <h2>ناوهای جنگی و ناوشکن‌ها</h2>
+
+  <h3>کلاس آرلی برک (Arleigh Burke-class)</h3>
+  <p>
+    معروف‌ترین ناوشکن جهان. مجهز به سیستم جنگی AEGIS، موشک SM-6، موشک‌های تاماهاوک، سامانه دفاع نزدیک و توان راداری بسیار بالا.
+  </p>
+
+  <h3>کلاس زاموالت (Zumwalt-class)</h3>
+  <p>
+    ناوشکن‌های پنهانکار آینده‌محور. با بدنه‌ای زاویه‌دار که بازتاب راداری را تا ۵۰ برابر کاهش می‌دهد.
+  </p>
+
+  <h3>کلاس تیکاندروگا (Ticonderoga-class)</h3>
+  <p>ناوهای رهگیر مجهز به رادارهای قدرتمند و ۱۲۲ پرتابگر عمودی.</p>
+</template>
+
+
+
+<template id="tpl-aircraft">
+  <h2>هواپیماها و جنگنده‌های ناوگان دریایی</h2>
+
+  <h3>F/A-18 Super Hornet</h3>
+  <p>جنگنده چندمنظوره نسل ۴٫۵ با نقش‌های حمله زمینی، دفاع هوایی و عملیات دریایی.</p>
+
+  <h3>F-35C Lightning II</h3>
+  <p>
+    پیشرفته‌ترین جنگنده ناونشین جهان با توان پنهان‌کاری، رادار AESA، سیستم هدف‌گیری HMD و حمل موشک‌های AIM-120D.
+  </p>
+
+  <h3>P-8 Poseidon</h3>
+  <p>هواپیمای ضدزیردریایی با رادارهای دریایی قدرتمند و توان حمل اژدر و موشک هارپون.</p>
+
+  <h3>EA-18G Growler</h3>
+  <p>هواپیمای تخصصی جنگ الکترونیک برای سرکوب رادارهای دشمن (SEAD).</p>
+</template>
+
+
+
+<template id="tpl-history">
+  <h2>تاریخچه نیروی دریایی ایالات متحده</h2>
+
+  <h3>تأسیس اولیه - 1775</h3>
+  <p>نیروی دریایی آمریکا در جنگ استقلال آمریکا بنیان‌گذاری شد.</p>
+
+  <h3>افزایش قدرت در قرن ۱۹</h3>
+  <p>با ساخت کشتی‌های بخار، آمریکا تبدیل به قدرت دریایی شد.</p>
+
+  <h3>جنگ جهانی دوم</h3>
+  <p>
+    اوج درخشش نیروی دریایی. نبردهای میدوی، کورال‌سی و گوادال‌کانال نقشی حیاتی در شکست ژاپن داشتند.
+  </p>
+
+  <h3>جنگ سرد</h3>
+  <p>افزایش ناوهای هسته‌ای، زیردریایی‌های بالستیک و حضور جهانی.</p>
+
+  <h3>قرن ۲۱</h3>
+  <p>
+    تمرکز بر جنگ الکترونیک، پهپادها، ناوشکن‌های پنهانکار و عملیات‌های خاورمیانه.
+  </p>
+</template>
+
+
+
+<template id="tpl-contact">
+  <h2>ارتباط با ما</h2>
   
-  <footer>
-    <p>⚓بابا بخدا خودم نوشتم⚓</p>
-  </footer>
-</div>
+  <p>تلفن 09013542489</p>
+  
+</template>
+
+
+
+<template id="tpl-register">
+  <h2>فرم ثبت‌نام</h2>
+  <p>لطفاً نام کاربری و رمز عبور را وارد کنید.</p>
+
+  <form>
+    <label>نام کاربری</label>
+    <input type="text" placeholder="نام کاربری">
+
+    <label>رمز عبور</label>
+    <input type="password" placeholder="رمز عبور">
+
+    <button type="button" onclick="alert('ثبت‌نام انجام شد!')">ثبت‌نام</button>
+  </form>
+</template>
+
 
 <script>
-function performLogin(){
-  var u=document.getElementById('username').value.trim();
-  var p=document.getElementById('password').value.trim();
-  if(u===""||p===""){alert('نام کاربری و رمز را وارد کنید');return;}
-  document.getElementById('loginView').style.display='none';
-  document.getElementById('app').style.display='block';
-  showPanel('dashboard');
+function loadPage(page){
+  const tpl=document.getElementById("tpl-"+page);
+  document.getElementById("content").innerHTML = tpl.innerHTML;
+  window.scrollTo(0,0);
 }
-function showPanel(id){
-  document.querySelectorAll('main section').forEach(s=>{
-    s.classList.remove('active');s.style.display='none';
-  });
-  var t=document.getElementById(id);
-  if(t){t.classList.add('active');t.style.display='block';window.scrollTo(0,0);}
-}
+loadPage("dashboard");
 </script>
 
 </body>
